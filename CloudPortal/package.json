@@ -1,0 +1,13 @@
+{
+  "name": "hht-fixed-public-portal",
+  "version": "11.6.1",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.16.0" },
+  "scripts": {
+    "check": "node --check worker/index.js && node --check worker/protocol.js && node --check worker/map-tiles.js && node --check scripts/build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "verify": "npm run check && npm test && npm run build"
+  }
+}
